@@ -25,6 +25,23 @@ def get_legal_forms(file_name):
                 legal_forms.extend(acronyms)
     return legal_forms
 
+def get_footer_copyright(soup):
+    copyright_text = []
+    for item in soup.findAll('div', {"id": re.compile('footer')}):
+        if 'copyright' in item.text.lower():
+            
+            # print('id',item.text)
+            pattern = "(?:[a-zA-Z'-]+[^a-zA-Z'-]+){0,4}" + 'copyright' +"(?:[^a-zA-Z'-]+[a-zA-Z'-]+){0,5}"               
+            context = re.search(pattern, item.text.lower())
+            copyright_text.append(context.group())
+    
+    for item in soup.findAll('div', {"class": re.compile('footer')}):
+        if 'copyright' in item.text.lower():
+            # print('cls', item.text) #.partition(first_legal_form))
+            pattern = "(?:[a-zA-Z'-]+[^a-zA-Z'-]+){0,4}" + 'copyright' +"(?:[^a-zA-Z'-]+[a-zA-Z'-]+){0,5}"               
+            context = re.search(pattern, item.text.lower())
+            copyright_text.append(context.group())
+    return copyright_text
 
 def scrape_legal_forms(text_content,legal_forms):
     first_legal_form = None
@@ -52,7 +69,12 @@ def scrape_content(URLs):
             soup = BeautifulSoup(page.content, "html.parser")
             text_content = get_text(soup.text)
             print('Scraping: ', url)
-            
+            copyright_text = get_footer_copyright(soup)
+            if len(copyright_text) > 0:
+                print('Copyright text: ',copyright_text)
+            else:
+                print('Copyright not found')
+                            
             legal_forms = get_legal_forms('es_legal_forms.json')    
             found_legal_forms, min_position = scrape_legal_forms(text_content, legal_forms)
 
