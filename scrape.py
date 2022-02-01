@@ -43,10 +43,19 @@ def get_footer_copyright(soup):
             copyright_text.append(context.group())
     return copyright_text
 
+def get_suffixes(file_name):
+    suffixes =[]
+    with in_place.InPlace(file_name) as file:
+        for line in file:
+            suffixes.append(line.strip())
+            file.write(line)
+    return suffixes
+
 def scrape_legal_forms(text_content,legal_forms):
     first_legal_form = None
     min_position = sys.maxsize
     found_legal_forms = []
+    suffixes = get_suffixes('SuffixesList.txt')
     for legal_form in legal_forms:
         position_found = is_company_type(text_content, legal_form)
         if position_found > 0:
@@ -59,7 +68,16 @@ def scrape_legal_forms(text_content,legal_forms):
                 context = re.search(pattern, text_content)
                 print(f"Legal form found: '{legal_form}'")
                 print(f"Context of above legal form: '{context.group()}'")
+                found_suffixes = []
+                for suff in suffixes:
+                    if suff in context.group():
+                        print(f"Suffix: '{suff}' found in legal form: '{legal_form}'")
+                        suffix_pattern = "(?:[a-zA-Z'-]+[^a-zA-Z'-]+){0,1}" + suff# +"(?:[^a-zA-Z'-]+[a-zA-Z'-]+){0,5}"               
+                        suffix_context = re.search(suffix_pattern, context.group())
+                        print(f"Context of above suffix: '{suffix_context.group()}'")
+                        found_suffixes.append(suffix_context.group())
                 print('----------')
+                # print(found_suffixes)
     return found_legal_forms, min_position
 
 def scrape_content(URLs):
@@ -74,7 +92,7 @@ def scrape_content(URLs):
                 print('Copyright text: ',copyright_text)
             else:
                 print('Copyright not found')
-                            
+            
             legal_forms = get_legal_forms('es_legal_forms.json')    
             found_legal_forms, min_position = scrape_legal_forms(text_content, legal_forms)
 
