@@ -1,0 +1,251 @@
+ISO_3166,Name_EN,Name_DE,Lat,Long,Notes,Parent_Region,Regulatory_Region
+AD,Andorra,Andorra,42.546245,1.601554,,,Other
+AE,United Arab Emirates,Vereinigte Arabische Emirate,23.424076,53.847818,,,Other
+AF,Afghanistan,Afghanistan,34.98300013,63.13329964,,,Other
+AG,Antigua and Barbuda,Antigua und Barbuda,17.11803652,-61.85003382,,,Other
+AI,Anguilla,Anguilla,18.220554,-63.068615,British Overseas Territories (BOTs),GB,5 Eyes
+AL,Albania,Albanien,41.51899817,19.79700359,,,Other
+AM,Armenia,Armenien,40.069099,45.038189,,,Other
+AO,Angola,Angola,-18.01953449,21.42999914,,,Other
+AQ,Antarctica,Antarktis,-75.250973,-0.071389,,,Other
+AR,Argentina,Argentinien,-38.416097,-63.616672,,,Other
+AS,American Samoa,Amerikanisch-Samoa,-14.2766105,-170.7066451,Unincorporated Territory,US,5 Eyes
+AT,Austria,Österreich,47.516231,14.550072,,EU,GDPR
+AU,Australia,Australien,-25.274398,133.775136,,,5 Eyes
+AW,Aruba,Aruba,12.52111,-69.968338,Constituent Country,NL,GDPR
+AX,Åland Islands,Åland-Inseln,60.116667,19.9,,EU,GDPR
+AZ,Azerbaijan,Aserbaidschan,40.143105,47.576927,,,Other
+BA,Bosnia and Herzegovina,Bosnien und Herzegowina,43.915886,17.679076,,,Other
+BB,Barbados,Barbados,13.193887,-59.543198,,,Other
+BD,Bangladesh,Bangladesch,23.684994,90.356331,,,Other
+BE,Belgium,Belgien,50.503887,4.469936,,EU,GDPR
+BF,Burkina Faso,Burkina Faso,12.238333,-1.561593,,,Other
+BG,Bulgaria,Bulgarien,42.733883,25.48583,,EU,GDPR
+BH,Bahrain,Bahrain,25.930414,50.637772,,,Other
+BI,Burundi,Burundi,-3.373056,29.918886,,,Other
+BJ,Benin,Benin,9.30769,2.315834,,,Other
+BL,Saint Barthélemy,St. Barthélemy,17.89698,-62.83403,French Overseas Collectivity,FR,GDPR
+BM,Bermuda,Bermuda,32.321384,-64.75737,British Overseas Territories (BOTs),GB,5 Eyes
+BN,Brunei Darussalam,Brunei Darussalam,4.535277,114.727669,,,Other
+BO,Bolivia,Bolivien,-16.290154,-63.588653,,,Other
+BQ,"Bonaire, Sint Eustatius and Saba","Bonaire, Sint Eustatius und Saba",12.183333,-68.233333,Special Municipality,NL,GDPR
+BR,Brazil,Brasilien,-14.235004,-51.92528,,,Other
+BS,Bahamas,Bahamas,25.03428,-77.39628,,,Other
+BT,Bhutan,Bhutan,27.514162,90.433601,,,Other
+BW,Botswana,Botswana,-22.328474,24.684866,,,Other
+BY,Belarus,Weißrussland,53.709807,27.953389,,,Other
+BZ,Belize,Belize,17.189877,-88.49765,,,Other
+CA,Canada,Kanada,56.130366,-106.346771,,,5 Eyes
+CC,Cocos (Keeling) Islands,Cocos (Keeling) Inseln,-12.164165,96.870956,,,Other
+CD,"Congo, The Democratic Republic of the","Kongo, die Demokratische Republik",-4.038333,21.758664,,,Other
+CF,Central African Republic,Zentralafrikanische Republik,6.611111,20.939444,,,Other
+CG,Congo,Kongo,-0.228021,15.827659,,,Other
+CH,Switzerland,Schweiz,46.818188,8.227512,,,Other
+CI,Côte d'Ivoire,Côte d'Ivoire,7.539989,-5.54708,,,Other
+CK,Cook Islands,Cook-Inseln,-21.236736,-159.777671,,,Other
+CL,Chile,Chile,-35.675147,-71.542969,,,Other
+CM,Cameroon,Kamerun,7.369722,12.354722,,,Other
+CN,China,China,35.86166,104.195397,,,China
+CO,Colombia,Kolumbien,4.570868,-74.297333,,,Other
+CR,Costa Rica,Costa Rica,9.748917,-83.753428,,,Other
+CU,Cuba,Kuba,21.521757,-77.781167,,,Other
+CV,Cape Verde,Kap Verde,16.002082,-24.013197,,,Other
+CW,Curaçao,Curaçao,12.116667,-68.933333,Constituent Country,NL,GDPR
+CX,Christmas Island,Weihnachtsinsel,-10.447525,105.690449,,AU,5 Eyes
+CY,Cyprus,Zypern,35.126413,33.429859,,EU,GDPR
+CZ,Czech Republic,Tschechische Republik,49.817492,15.472962,,EU,GDPR
+DE,Germany,Deutschland,51.165691,10.451526,,EU,GDPR
+DJ,Djibouti,Dschibuti,11.825138,42.590275,,,Other
+DK,Denmark,Dänemark,56.26392,9.501785,,EU,GDPR
+DM,Dominica,Dominica,15.414999,-61.370976,,,Other
+DO,Dominican Republic,Dominikanische Republik,18.735693,-70.162651,,,Other
+DZ,Algeria,Algerien,28.033886,1.659626,,,Other
+EC,Ecuador,Ecuador,-1.831239,-78.183406,,,Other
+EE,Estonia,Estland,58.595272,25.013607,,EU,GDPR
+EG,Egypt,Ägypten,26.820553,30.802498,,,Other
+EH,Western Sahara,Westsahara,24.215527,-12.885834,,,Other
+ER,Eritrea,Eritrea,15.179384,39.782334,,,Other
+ES,Spain,Spanien,40.463667,-3.74922,,EU,GDPR
+ET,Ethiopia,Äthiopien,9.145,40.489673,,,Other
+FI,Finland,Finnland,61.92411,25.748151,,EU,GDPR
+FJ,Fiji,Fidschi,-16.578193,179.414413,,,Other
+FK,Falkland Islands (Malvinas),Falklandinseln (Malwinen),-51.796253,-59.523613,British Overseas Territories (BOTs),GB,5 Eyes
+FM,"Micronesia, Federated States of","Mikronesien, Föderierte Staaten von",7.425554,150.550812,,,Other
+FO,Faroe Islands,Färöer Inseln,61.892635,-6.911806,,,Other
+FR,France,Frankreich,46.227638,2.213749,,EU,GDPR
+GA,Gabon,Gabun,-0.803689,11.609444,,,Other
+GB,United Kingdom,Vereinigtes Königreich,55.378051,-3.435973,,,5 Eyes
+GD,Grenada,Grenada,12.262776,-61.604171,,,Other
+GE,Georgia,Georgien,42.315407,43.356892,,,Other
+GF,French Guiana,Französisch-Guayana,3.933889,-53.125782,Overseas department and region of France,FR,GDPR
+GG,Guernsey,Guernsey,49.465691,-2.585278,,GB,Other
+GH,Ghana,Ghana,7.946527,-1.023194,,,Other
+GI,Gibraltar,Gibraltar,36.137741,-5.345374,British Overseas Territories (BOTs),GB,5 Eyes
+GL,Greenland,Grönland,71.706936,-42.604303,,DK,GDPR
+GM,Gambia,Gambia,13.443182,-15.310139,,,Other
+GN,Guinea,Guinea,9.945587,-9.696645,,,Other
+GP,Guadeloupe,Guadeloupe,16.995971,-62.067641,Overseas department and region of France,FR,GDPR
+GQ,Equatorial Guinea,Äquatorial-Guinea,1.650801,10.267895,,,Other
+GR,Greece,Griechenland,39.074208,21.824312,,EU,GDPR
+GS,South Georgia and the South Sandwich Islands,Südgeorgien und die Südlichen Sandwichinseln,-54.429579,-36.587909,British Overseas Territories (BOTs),GB,5 Eyes
+GT,Guatemala,Guatemala,15.783471,-90.230759,,,Other
+GU,Guam,Guam,13.444304,144.793731,,US,5 Eyes
+GW,Guinea-Bissau,Guinea-Bissau,11.803749,-15.180413,,,Other
+GY,Guyana,Guyana,4.860416,-58.93018,,,Other
+HK,Hong Kong,Hongkong,22.396428,114.109497,,,China
+HM,Heard Island and McDonald Islands,Heard-Insel und McDonald-Inseln,-53.08181,73.504158,,AU,5 Eyes
+HN,Honduras,Honduras,15.199999,-86.241905,,,Other
+HR,Croatia,Kroatien,45.1,15.2,,EU,GDPR
+HT,Haiti,Haiti,18.971187,-72.285215,,,Other
+HU,Hungary,Ungarn,47.162494,19.503304,,EU,GDPR
+ID,Indonesia,Indonesien,-0.789275,113.921327,,,Other
+IE,Ireland,Irland,53.41291,-8.24389,,EU,GDPR
+IL,Israel,Israel,31.046051,34.851612,,,Other
+IM,Isle of Man,Isle of Man,54.236107,-4.548056,,GB,Other
+IN,India,Indien,20.593684,78.96288,,,Other
+IO,British Indian Ocean Territory,Britisches Territorium im Indischen Ozean,-6.343194,71.876519,British Overseas Territories (BOTs),GB,5 Eyes
+IQ,Iraq,Irak,33.223191,43.679291,,,Other
+IR,"Iran, Islamic Republic of","Iran, Islamische Republik",32.427908,53.688046,,,Other
+IS,Iceland,Island,64.963051,-19.020835,,,GDPR
+IT,Italy,Italien,41.87194,12.56738,,EU,GDPR
+JE,Jersey,Jersey,49.214439,-2.13125,,GB,Other
+JM,Jamaica,Jamaika,18.109581,-77.297508,,,Other
+JO,Jordan,Jordanien,30.585164,36.238414,,,Other
+JP,Japan,Japan,36.204824,138.252924,,,Other
+KE,Kenya,Kenia,-0.023559,37.906193,,,Other
+KG,Kyrgyzstan,Kirgisistan,41.20438,74.766098,,,Other
+KH,Cambodia,Kambodscha,12.565679,104.990963,,,Other
+KI,Kiribati,Kiribati,-3.370417,-168.734039,,,Other
+KM,Comoros,Komoren,-11.875001,43.872219,,,Other
+KN,Saint Kitts and Nevis,St. Kitts und Nevis,17.357822,-62.782998,,,Other
+KP,"Korea, Democratic People's Republic of","Korea, Demokratische Volksrepublik",40.339852,127.510093,,,Other
+KR,"Korea, Republic of","Korea, Republik",35.907757,127.766922,,,Other
+KW,Kuwait,Kuwait,29.31166,47.481766,,,Other
+KY,Cayman Islands,Cayman-Inseln,19.513469,-80.566956,British Overseas Territories (BOTs),GB,5 Eyes
+KZ,Kazakhstan,Kasachstan,48.019573,66.923684,,,Other
+LA,Lao People's Democratic Republic,Laotische Demokratische Volksrepublik,19.85627,102.495496,,,Other
+LB,Lebanon,Libanon,33.854721,35.862285,,,Other
+LC,Saint Lucia,St. Lucia,13.909444,-60.978893,,,Other
+LI,Liechtenstein,Liechtenstein,47.166,9.555373,,,GDPR
+LK,Sri Lanka,Sri Lanka,7.873054,80.771797,,,Other
+LR,Liberia,Liberia,6.428055,-9.429499,,,Other
+LS,Lesotho,Lesotho,29.609988,28.233608,,,Other
+LT,Lithuania,Litauen,55.169438,23.881275,,EU,GDPR
+LU,Luxembourg,Luxemburg,49.815273,6.129583,,EU,GDPR
+LV,Latvia,Lettland,56.879635,24.603189,,EU,GDPR
+LY,Libya,Libyen,26.3351,17.228331,,,Other
+MA,Morocco,Marokko,31.791702,-7.09262,,,Other
+MC,Monaco,Monaco,43.750298,7.412841,,,Other
+MD,"Moldova, Republic of","Moldawien, Republik",47.411631,28.369885,,,Other
+ME,Montenegro,Montenegro,42.708678,19.37439,,EU,GDPR
+MF,Saint Martin (French Part),St. Martin (französischer Teil),,,French Overseas Collectivty,FR,GDPR
+MG,Madagascar,Madagaskar,-18.766947,46.869107,,,Other
+MH,Marshall Islands,Marshall-Inseln,7.131474,171.184478,,,Other
+MK,"Macedonia, The former Yugoslav Republic of","Mazedonien, die ehemalige jugoslawische Republik",41.608635,21.745275,,,Other
+ML,Mali,Mali,17.570692,-3.996166,,,Other
+MM,Myanmar,Myanmar,21.913965,95.956223,,,Other
+MN,Mongolia,Mongolei,46.862496,103.846656,,,Other
+MO,Macao,Macao,22.198745,113.543873,Special Administrative Region of the People's Republic of China,CN,China
+MP,Northern Mariana Islands,Nördliche Marianen,17.33083,145.38469,,US,5 Eyes
+MQ,Martinique,Martinique,14.641528,-61.024174,Overseas department and region of France,FR,GDPR
+MR,Mauritania,Mauretanien,21.00789,-10.940835,,,Other
+MS,Montserrat,Montserrat,16.742498,-62.187366,,,Other
+MT,Malta,Malta,35.937496,14.375416,,EU,GDPR
+MU,Mauritius,Mauritius,-20.348404,57.552152,,,Other
+MV,Maldives,Malediven,3.202778,73.22068,,,Other
+MW,Malawi,Malawi,-13.254308,34.301525,,,Other
+MX,Mexico,Mexiko,23.634501,-102.552784,,,Other
+MY,Malaysia,Malaysia,4.210484,101.975766,,,Other
+MZ,Mozambique,Mosambik,-18.665695,35.529562,,,Other
+NA,Namibia,Namibia,-22.95764,18.49041,,,Other
+NC,New Caledonia,Neukaledonien,-20.904305,165.618042,Special collectivity,FR,GDPR
+NE,Niger,Niger,17.607789,8.081666,,,Other
+NF,Norfolk Island,Norfolkinsel,-29.040835,167.954712,External Territory,AU,5 Eyes
+NG,Nigeria,Nigeria,9.081999,8.675277,,,Other
+NI,Nicaragua,Nicaragua,12.865416,-85.207229,,,Other
+NL,Netherlands,Niederlande,52.132633,5.291266,,EU,GDPR
+NO,Norway,Norwegen,60.472024,8.468946,,,GDPR
+NP,Nepal,Nepal,28.394857,84.124008,,,Other
+NR,Nauru,Nauru,-0.522778,166.931503,,,Other
+NU,Niue,Niue,-19.054445,-169.867233,,,Other
+NZ,New Zealand,Neu Seeland,-40.900557,174.885971,,,5 Eyes
+OM,Oman,Oman,21.512583,55.923255,,,Other
+PA,Panama,Panama,8.537981,-80.782127,,,Other
+PE,Peru,Peru,-9.189967,-75.015152,,,Other
+PF,French Polynesia,Französisch-Polynesien,-17.679742,-149.406843,French Overseas Collectivty,FR,GDPR
+PG,Papua New Guinea,Papua-Neuguinea,-6.314993,143.95555,,,Other
+PH,Philippines,Philippinen,12.879721,121.774017,,,Other
+PK,Pakistan,Pakistan,30.375321,69.345116,,,Other
+PL,Poland,Polen,51.919438,19.145136,,EU,GDPR
+PM,Saint Pierre and Miquelon,St. Pierre und Miquelon,46.941936,-56.27111,French Overseas Collectivty,FR,GDPR
+PN,Pitcairn,Pitcairn,-24.703615,-127.439308,British Overseas Territories (BOTs),GB,5 Eyes
+PR,Puerto Rico,Puerto Rico,18.220833,-66.590149,Unincorporated Territory,US,5 Eyes
+PS,"Palestine, State of","Palästina, Staat",31.952162,35.233154,,,Other
+PT,Portugal,Portugal,39.399872,-8.224454,,EU,GDPR
+PW,Palau,Palau,7.51498,134.58252,,,Other
+PY,Paraguay,Paraguay,-23.442503,-58.443832,,,Other
+QA,Qatar,Katar,25.354826,51.183884,,,Other
+RE,Reunion,Reunion,-21.115141,55.53638,Overseas department and region of France,FR,GDPR
+RO,Romania,Rumänien,45.943161,24.96676,,EU,GDPR
+RS,Serbia,Serbien,44.016521,21.005859,,,Other
+RU,Russian Federation,Russische Föderation,61.52401,105.318756,,,Russia
+RW,Rwanda,Ruanda,-1.940278,29.873888,,,Other
+SA,Saudi Arabia,Saudi-Arabien,23.885942,45.079162,,,Other
+SB,Solomon Islands,Salomon-Inseln,-9.64571,160.156194,,,Other
+SC,Seychelles,Seychellen,-4.679574,55.491977,,,Other
+SD,Sudan,Sudan,12.862807,30.217636,,,Other
+SE,Sweden,Schweden,60.128161,18.643501,,EU,GDPR
+SG,Singapore,Singapur,1.352083,103.819836,,,Other
+SH,"Saint Helena, Ascension and Tristan Da Cunha","St. Helena, Ascension und Tristan Da Cunha",-24.143474,-10.030696,British Overseas Territories (BOTs),GB,5 Eyes
+SI,Slovenia,Slowenien,46.151241,14.995463,,EU,GDPR
+SJ,Svalbard and Jan Mayen,Svalbard und Jan Mayen,77.553604,23.670272,"Two administratively unrelated island jurisdictions of Norway in the Arctic Ocean, mainly consisting of mining and research operations. ",NO,GDPR
+SK,Slovakia,Slowakei,48.669026,19.699024,,EU,GDPR
+SL,Sierra Leone,Sierra Leone,8.460555,-11.779889,,,Other
+SM,San Marino,San Marino,43.94236,12.457777,,IT,GDPR
+SN,Senegal,Senegal,14.497401,-14.452362,,,Other
+SO,Somalia,Somalia,5.152149,46.199616,,,Other
+SR,Suriname,Surinam,3.919305,-56.027783,,,Other
+SS,South Sudan,Südsudan,6.705434,30.075526,,,Other
+ST,Sao Tome and Principe,Sao Tome und Principe,0.18636,6.613081,,,Other
+SV,El Salvador,El Salvador,13.794185,-88.89653,,,Other
+SX,Sint Maarten (Dutch Part),Sint Maarten (Niederländischer Teil),,,Constituent Country,NL,GDPR
+SY,Syrian Arab Republic,"Syrien, Arabische Republik",34.802075,38.996815,,,Other
+SZ,Eswatini,Eswatini,-26.522503,31.465866,,,Other
+TC,Turks and Caicos Islands,Turks- und Caicosinseln,21.694025,-71.797928,British Overseas Territories (BOTs),GB,5 Eyes
+TD,Chad,Tschad,15.454166,18.732207,,,Other
+TF,French Southern Territories,Französische Süd-Territorien,-49.280366,69.348557,French Overseas Territory,FR,GDPR
+TG,Togo,Togo,8.619543,0.824782,,,Other
+TH,Thailand,Thailand,15.870032,100.992541,,,Other
+TJ,Tajikistan,Tadschikistan,38.861034,71.276093,,,Other
+TK,Tokelau,Tokelau,-8.967363,-171.855881,Dependent Territory of New Zealand,NZ,5 Eyes
+TL,Timor-Leste,Timor-Leste,-8.874217,125.727539,,,Other
+TM,Turkmenistan,Turkmenistan,38.969719,59.556278,,,Other
+TN,Tunisia,Tunesien,33.886917,9.537499,,,Other
+TO,Tonga,Tonga,-21.178986,-175.198242,,,Other
+TR,Turkey,Türkei,38.963745,35.243322,,,Other
+TT,Trinidad and Tobago,Trinidad und Tobago,10.691803,-61.222503,,,Other
+TV,Tuvalu,Tuvalu,-7.109535,177.64933,,,Other
+TW,"Taiwan, Province of China","Taiwan, Provinz China",23.69781,120.960515,AKA Republic of China,,Other
+TZ,"Tanzania, United Republic of","Tansania, Vereinigte Republik",-6.369028,34.888822,,,Other
+UA,Ukraine,Ukraine,48.379433,31.16558,,,Other
+UG,Uganda,Uganda,1.373333,32.290275,,,Other
+UM,United States Minor Outlying Islands,Vereinigte Staaten Minor Outlying Islands,,,Variously Located,US,5 Eyes
+US,United States ,Vereinigte Staaten ,37.09024,-95.712891,,,5 Eyes
+UY,Uruguay,Uruguay,-32.522779,-55.765835,,,Other
+UZ,Uzbekistan,Usbekistan,41.377491,64.585262,,,Other
+VA,Holy See (Vatican City State),Heiliger Stuhl (Staat Vatikanstadt),41.902916,12.453389,,,GDPR
+VC,Saint Vincent and the Grenadines,St. Vincent und die Grenadinen,12.984305,-61.287228,,,Other
+VE,Venezuela,Venezuela,6.42375,-66.58973,,,Other
+VG,"Virgin Islands, British","Jungferninseln, Britische",18.420695,-64.639968,British Overseas Territories (BOTs),GB,5 Eyes
+VI,"Virgin Islands, U.S.","Jungferninseln, U.S.",18.335765,-64.896335,Unincorporated Territory,US,5 Eyes
+VN,Viet Nam,Vietnam,14.058324,108.277199,,,Other
+VU,Vanuatu,Vanuatu,-15.376706,166.959158,,,Other
+WF,Wallis and Futuna,Wallis und Futuna,-13.768752,-177.156097,French Overseas Collectivty,FR,GDPR
+WS,Samoa,Samoa,-13.759029,-172.104629,,,Other
+XZ,Installations in International Waters,Anlagen in internationalen Gewässern,,,Variously Located,,Other
+YE,Yemen,Jemen,15.552727,48.516388,,,Other
+YT,Mayotte,Mayotte,-12.8275,45.166244,Overseas department and region of France,FR,GDPR
+ZA,South Africa,Südafrika,-30.559482,22.937506,,,Other
+ZM,Zambia,Sambia,-13.133897,27.849332,,,Other
+ZW,Zimbabwe,Simbabwe,-19.015438,29.154857,,,Other
+XK,Kosovo,Kosovo,42.602636,20.902977,Only Recognised as independent from Serbia by 98 UN member states,,Other

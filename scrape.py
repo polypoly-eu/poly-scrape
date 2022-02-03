@@ -94,7 +94,24 @@ def scrape_legal_forms(text_content,legal_forms):
                 # print(found_suffixes)
     return found_legal_forms, min_position
 
+def get_countries(countries_path):
+    countries_list =[]
+    with open(countries_path) as c_file:  # pylint: disable=unspecified-encoding
+        reader = list(csv.DictReader(c_file, delimiter=','))
 
+        for row in reader:
+            countries_list.append(row['Name_EN'])
+    return countries_list    
+
+def scrape_country(text_content):
+    countries = get_countries(COUNTRIES_PATH)
+    occurrences = []
+    for idx, country in enumerate(countries):
+        count = sum(1 for _ in re.finditer(r'\b%s\b' % re.escape(country),text_content))
+        occurrences.append(count)
+    sorted_indexes = np.argsort(np.array(occurrences))
+    if occurrences[sorted_indexes[-1]] > occurrences[sorted_indexes[-2]] and occurrences[sorted_indexes[-1]] > 0:
+        print('Country of jurisdiction: ',countries[sorted_indexes[-1]])
 
 def scrape_content(URLs):
     for url in URLs:
@@ -106,7 +123,7 @@ def scrape_content(URLs):
 
         text_content = get_text(soup.text)
         print('Scraping: ', url)
-        
+        scrape_country(text_content)
         copyright_text = get_footer_copyright(soup,url)
         if len(copyright_text) > 0:
             print('Copyright text: ',copyright_text)
