@@ -5,7 +5,10 @@ import sys
 import re
 import json
 import in_place
+import numpy as np
+import csv
 
+COUNTRIES_PATH = './Countries.csv'
 
 def get_text(html_text):
     doc = Document(html_text)
@@ -25,11 +28,14 @@ def get_legal_forms(file_name):
                 legal_forms.extend(acronyms)
     return legal_forms
 
-def get_footer_copyright(soup):
+def get_footer_copyright(soup,url):
+    company_alias =  re.findall('https://www.([\w\-]+).(\w+).(\w+)',url)
+    if company_alias:
+        company_alias = company_alias[0][0]
+        print('comp alias:',company_alias)
     copyright_text = []
     for item in soup.findAll('div', {"id": re.compile('footer')}):
-        if 'copyright' in item.text.lower():
-            
+        if 'copyright' in item.text.lower():            
             # print('id',item.text)
             pattern = "(?:[a-zA-Z'-]+[^a-zA-Z'-]+){0,4}" + 'copyright' +"(?:[^a-zA-Z'-]+[a-zA-Z'-]+){0,5}"               
             context = re.search(pattern, item.text.lower())
@@ -41,6 +47,14 @@ def get_footer_copyright(soup):
             pattern = "(?:[a-zA-Z'-]+[^a-zA-Z'-]+){0,4}" + 'copyright' +"(?:[^a-zA-Z'-]+[a-zA-Z'-]+){0,5}"               
             context = re.search(pattern, item.text.lower())
             copyright_text.append(context.group())
+    if not copyright_text:
+        unicode_sym = b'\xc2\xa9'
+        unicode_sym = unicode_sym.decode('utf-8')
+        copyright_context = re.findall("(?:[a-zA-Z'-]+[^a-zA-Z'-]+){0,4}"+ unicode_sym + "(?:[^a-zA-Z'-]+[a-zA-Z'-]+){0,5}", soup.text)
+        for text in copyright_context:
+            if company_alias:
+                if company_alias in text.lower():
+                    print('Context of copyright symbol: ', text)
     return copyright_text
 
 def get_suffixes(file_name):
@@ -80,29 +94,34 @@ def scrape_legal_forms(text_content,legal_forms):
                 # print(found_suffixes)
     return found_legal_forms, min_position
 
+
+
 def scrape_content(URLs):
     for url in URLs:
         try:
             page = requests.get(url)
             soup = BeautifulSoup(page.content, "html.parser")
-            text_content = get_text(soup.text)
-            print('Scraping: ', url)
-            copyright_text = get_footer_copyright(soup)
-            if len(copyright_text) > 0:
-                print('Copyright text: ',copyright_text)
-            else:
-                print('Copyright not found')
-            
-            legal_forms = get_legal_forms('es_legal_forms.json')    
-            found_legal_forms, min_position = scrape_legal_forms(text_content, legal_forms)
-
-            if min_position < sys.maxsize:
-                print('Company type: ', found_legal_forms, url)                        
-            else:
-                print('Legal form not found')
-            print('==================================================================================')
         except Exception as error:
             print('Skipping: ', url, ' ERROR: ', str(error))
+
+        text_content = get_text(soup.text)
+        print('Scraping: ', url)
+        
+        copyright_text = get_footer_copyright(soup,url)
+        if len(copyright_text) > 0:
+            print('Copyright text: ',copyright_text)
+        else:
+            print('Copyright not found')
+        
+        legal_forms = get_legal_forms('es_legal_forms.json')    
+        found_legal_forms, min_position = scrape_legal_forms(text_content, legal_forms)
+
+        if min_position < sys.maxsize:
+            print('Company type: ', found_legal_forms, url)                        
+        else:
+            print('Legal form not found')
+        print('==================================================================================')
+
 
 def get_urls(file_name):
     urls = []
