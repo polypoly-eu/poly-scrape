@@ -44,6 +44,10 @@ def get_urls(file_name):
             file.write(line)
     return urls
 
+def is_company_type(text, company_type):
+    return min(p for p in [text.find(f" {company_type} "), text.find(f" {company_type}."), text.find(f" {company_type},"), sys.maxsize ] if p > 0)
+
+
 def get_countries(countries_path):
     countries_list =[]
     with open(countries_path) as c_file:  # pylint: disable=unspecified-encoding
@@ -109,6 +113,43 @@ def scrape_country(text_content):
         return None
 
 
+def get_suffixes(file_name):
+    suffixes =[]
+    with in_place.InPlace(file_name) as file:
+        for line in file:
+            suffixes.append(line.strip())
+            file.write(line)
+    return suffixes
+
+def scrape_legal_forms(text_content,legal_forms):
+    first_legal_form = None
+    min_position = sys.maxsize
+    found_legal_forms = []
+    suffixes = get_suffixes('SuffixesList.txt')
+    for legal_form in legal_forms:
+        position_found = is_company_type(text_content, legal_form)
+        if position_found > 0:
+            if position_found < min_position:
+                found_legal_forms.append(legal_form)
+                first_legal_form = legal_form
+                min_position = position_found
+                
+                pattern = "(?:[a-zA-Z'-]+[^a-zA-Z'-]+){0,4}" + first_legal_form# +"(?:[^a-zA-Z'-]+[a-zA-Z'-]+){0,5}"               
+                context = re.search(pattern, text_content)
+                print(f"Legal form found: '{legal_form}'")
+                print(f"Context of above legal form: '{context.group()}'")
+                found_suffixes = []
+                for suff in suffixes:
+                    if suff in context.group():
+                        print(f"Suffix: '{suff}' found in legal form: '{legal_form}'")
+                        suffix_pattern = "(?:[a-zA-Z'-]+[^a-zA-Z'-]+){0,1}" + suff# +"(?:[^a-zA-Z'-]+[a-zA-Z'-]+){0,5}"               
+                        suffix_context = re.search(suffix_pattern, context.group())
+                        print(f"Context of above suffix: '{suffix_context.group()}'")
+                        found_suffixes.append(suffix_context.group())
+                print('----------')
+                # print(found_suffixes)
+    return found_legal_forms, min_position
+
 class PolypolySpider(Spider):
     name = 'polypoly'
     count = 0
@@ -153,6 +194,14 @@ class PolypolySpider(Spider):
                     f.write(f'Copyright text: {copyright_text}\n\n')
                 else:
                     f.write(f'Copyright not found \n\n')
+            legal_forms = get_legal_forms('es_legal_forms.json')    
+            found_legal_forms, min_position = scrape_legal_forms(tc_content, legal_forms)
+
+            if min_position < sys.maxsize:
+                print('Company type: ', found_legal_forms, response.url)
+            else:
+                print('Legal form not found')
+            print('==================================================================================')
         else:
             self.failed_urls.append(response.url)
             with open('log.txt', 'a') as f:
