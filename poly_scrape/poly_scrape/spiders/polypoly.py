@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from bs4 import BeautifulSoup
 import csv
 import numpy as np
 import in_place
@@ -51,6 +52,34 @@ def get_countries(countries_path):
         for row in reader:
             countries_list.append(row['Name_EN'])
     return countries_list 
+
+def get_footer_copyright(soup,url):
+    company_alias =  re.findall('https://www.([\w\-]+).(\w+).(\w+)',url)
+    if company_alias:
+        company_alias = company_alias[0][0]
+    copyright_text = []
+    for item in soup.findAll('div', {"id": re.compile('footer')}):
+        if 'copyright' in item.text.lower():            
+            # print('id',item.text)
+            pattern = "(?:[a-zA-Z'-]+[^a-zA-Z'-]+){0,4}" + 'copyright' +"(?:[^a-zA-Z'-]+[a-zA-Z'-]+){0,5}"               
+            context = re.search(pattern, item.text.lower())
+            copyright_text.append(context.group())
+    
+    for item in soup.findAll('div', {"class": re.compile('footer')}):
+        if 'copyright' in item.text.lower():
+            # print('cls', item.text) #.partition(first_legal_form))
+            pattern = "(?:[a-zA-Z'-]+[^a-zA-Z'-]+){0,4}" + 'copyright' +"(?:[^a-zA-Z'-]+[a-zA-Z'-]+){0,5}"               
+            context = re.search(pattern, item.text.lower())
+            copyright_text.append(context.group())
+    if not copyright_text:
+        unicode_sym = b'\xc2\xa9'
+        unicode_sym = unicode_sym.decode('utf-8')
+        copyright_context = re.findall("(?:[a-zA-Z'-]+[^a-zA-Z'-]+){0,4}"+ unicode_sym + "(?:[^a-zA-Z'-]+[a-zA-Z'-]+){0,5}", soup.text)
+        for text in copyright_context:
+            if company_alias:
+                if company_alias in text.lower():
+                    copyright_text.append(text)
+    return copyright_text 
 
 def get_legal_forms(file_name):
     legal_forms = []
@@ -115,6 +144,15 @@ class PolypolySpider(Spider):
                     f.write(f'Country of jurisdiction: {country}\n\n')
                 else:
                     f.write('No result found for country jurisdiction\n\n')
+
+            page = requests.get(response.url)
+            soup = BeautifulSoup(page.content, "html.parser")
+            copyright_text = get_footer_copyright(soup,response.url)
+            with open('log.txt', 'a') as f:
+                if len(copyright_text) > 0:
+                    f.write(f'Copyright text: {copyright_text}\n\n')
+                else:
+                    f.write(f'Copyright not found \n\n')
         else:
             self.failed_urls.append(response.url)
             with open('log.txt', 'a') as f:
