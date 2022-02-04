@@ -1,4 +1,6 @@
+scrapy
 requests
+readability-lxml
 bs4
 numpy
 in_place

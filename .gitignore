@@ -1,3 +1,5 @@
 scrape_log.txt
 ._in_place-*
 *.pyc
+*.DS_Store
+log.txt
